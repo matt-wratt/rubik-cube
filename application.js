@@ -97,6 +97,8 @@ function createScene(world) {
     if (event.key == 'Q') cube.frontPrime()
     if (event.key == 'e') cube.back()
     if (event.key == 'E') cube.backPrime()
+    if (event.key == 'z') cube.leftTrigger()
+    if (event.key == 'c') cube.rightTrigger()
   })
 
   return world

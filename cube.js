@@ -207,21 +207,35 @@ export function createCube(camera) {
   }
 
   return {
-    up: () => animation.moves.push([orientMove(UP), false]),
-    down: () => animation.moves.push([orientMove(DOWN), false]),
-    left: () => animation.moves.push([orientMove(LEFT), false]),
-    right: () => animation.moves.push([orientMove(RIGHT), false]),
-    front: () => animation.moves.push([orientMove(FRONT), false]),
-    back: () => animation.moves.push([orientMove(BACK), false]),
-    upPrime: () => animation.moves.push([orientMove(UP), true]),
-    downPrime: () => animation.moves.push([orientMove(DOWN), true]),
-    leftPrime: () => animation.moves.push([orientMove(LEFT), true]),
-    rightPrime: () => animation.moves.push([orientMove(RIGHT), true]),
-    frontPrime: () => animation.moves.push([orientMove(FRONT), true]),
-    backPrime: () => animation.moves.push([orientMove(BACK), true]),
+    up: () => move(UP, false),
+    down: () => move(DOWN, false),
+    left: () => move(LEFT, false),
+    right: () => move(RIGHT, false),
+    front: () => move(FRONT, false),
+    back: () => move(BACK, false),
+    upPrime: () => move(UP, true),
+    downPrime: () => move(DOWN, true),
+    leftPrime: () => move(LEFT, true),
+    rightPrime: () => move(RIGHT, true),
+    frontPrime: () => move(FRONT, true),
+    backPrime: () => move(BACK, true),
+    rightTrigger: () => {
+      move(RIGHT, false)
+      move(UP, false)
+      move(RIGHT, true)
+    },
+    leftTrigger: () => {
+      move(LEFT, true)
+      move(UP, true)
+      move(LEFT, false)
+    },
     scramble,
     three: root,
     update,
+  }
+
+  function move(direction, prime) {
+    animation.moves.push([orientMove(direction), prime])
   }
 
   function orientMove(move) {
