@@ -18,15 +18,6 @@ const DIRECTION = {
   BACK: [-1, 0, 0],
 }
 
-const COLORS = {
-  WHITE: 0xffffff,
-  YELLOW: 0xffff00,
-  ORANGE: 0xffa500,
-  RED: 0xff0000,
-  GREEN: 0x00ff00,
-  BLUE: 0x0000ff,
-}
-
 const UP = 'UP'
 const DOWN = 'DOWN'
 const LEFT = 'LEFT'
