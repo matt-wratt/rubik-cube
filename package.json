@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build --public-url /dist --bundle-node-modules index.html"
   },
   "dependencies": {
     "three": "0.118.3",
