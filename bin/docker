@@ -1,0 +1,11 @@
+#!/bin/sh
+
+app="rubik-cube"
+
+docker run \
+  --volume="$(pwd):/$app" \
+  --workdir="/$app" \
+  --interactive \
+  --tty \
+  --rm \
+  node:lts-alpine ${@-sh}

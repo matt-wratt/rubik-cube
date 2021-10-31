@@ -1,11 +1,11 @@
 {
-  "name": "rubix-cube",
+  "name": "rubik-cube",
   "version": "1.0.0",
-  "description": "A simple solvable rubix cube using THREE.js",
+  "description": "A simple solvable rubik cube using THREE.js",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build --public-url /dist --bundle-node-modules index.html"
   },
   "dependencies": {
     "three": "0.118.3",
