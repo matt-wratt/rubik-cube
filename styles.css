@@ -13,6 +13,7 @@
   z-index: 100;
   display: block;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 table tr td:nth-child(1),
